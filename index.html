@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Forjeon's Software-Field Portfolio — Game Dev, 3D Modeling, Misc. Apps</title>
+<title>Forjeon's Portfolio — Game Dev, 3D Modeling, Misc. Apps</title>
+<link rel="icon" href="favicon.png">
 <link href='https://fonts.googleapis.com/css?family=Exo 2' rel='stylesheet'>
 <style>
 body {
@@ -9,15 +10,113 @@ body {
 }
 </style>
 </head>
-<body style="background-color: #2b2b2b">
-<header style="background-color: #555555", style="margin: 0">
-	<p style="margin-left: 10px", style="margin-bottom: 0", style="color: #007a00">John Forsgren</p>
-	<p style="margin-left: 20px", style="margin-bottom: 10px", style="color: #ff0000">Pseudonyms: Forjeon Thost; Forjeon</p>
-	<h6 style="color: #0000ff">info</h6>
-	<div style="background-color: #6a6a6a", style="color: #00aa55", style="width: 400px">
-		<p style="margin-bottom: 10px"><b>Navigation —</b></p>
-		<p style="margin-bottom: 10px", style="margin-left: 10px">WIP</p>
+<body style="background-color: #2b2b2b; color: #ffffff">
+<div style="height: 125px; background-color: #555555">
+	<h1 style="margin-left: 10%; margin-bottom: 0; color: #00ff00">John Forsgren</h1>
+	<p style="margin-left: 12%; margin-bottom: 0; margin-top: 0"><i>Pseudonym: <span style="color: #00cc00", title="ATI-Gaming, Forjeon22i7, Thost">Forjeon</span></i></p>
+	<p style="margin-left: 12%; margin-bottom: 0; margin-top: 0"><i>Hobbyist <span style="color: #00cc00", title="Desktop, Mobile VR; Unity, BGE, Unreal">Game Developer</span>, <span title="Metroid Cubed 4", style="color: #00cc77">Minecraft Mod Dev</span>, <span style="color: #00ccaa", title="Python, C#, Java, HTML, CSS, Javascript">Programmer</span></i></p>
+	<p style="margin-left: 12%; margin-bottom: 0; margin-top: 0"><span style="color: #00cc00", title="VR, Desktop, Tabletop, IRL">Gaming</span>, <span style="color: #00cc77", title="Calculus, Trig, Algebra, Geometry">Math</span>, and <span style="color: #00ccaa", title="Programming, Engineering, Physics">Science</span> Nerd</p>
+</div>
+<div style="margin-top: 5%">
+	<h2 style="margin-left: 7%; margin-bottom: 20px; color: #00cc00">VR Hand-Tracked FPS</h2>
+	<div style="background-color: #00cc00; height: 5px; width: 50%; margin-left: 5%; margin-bottom: 50px"></div>
+	<div style="display: flex; justify-content: center">
+		<video controls><source src="metroidFPS.mp4" type="video/mp4"> Your browser does not support the HTML 'video' tag.</video>
 	</div>
-</header>
+	<br>
+	<p style="margin-left: 10%; width: 80%">In this game environment I experiment with the accuracy and tactile-control that hand-tracked VR apps can offer. The system can recognize any hand-finger pose and--after a calibration phase--recall and identify said poses at any later time. A 'system alert' gesture is used to tell the system to look for the poses; this saves on processing power by only running the pose-checker when the user intends to activate a pose.<br><br>I also built the custom scipts that control the playing, looping, and changing of sound effects, as well as the scripts controlling the firing, charging, projectile settings, and projectile interactions. This game also features IK rigging on the player avatar, allowing arms and a full body to be visible without adding in additional tracking hardware / software.</p>
+	<br>
+	<p style="margin-left: 20%; width: 60%; text-align: center; color: #ff0000; font-size: 15px"><b><span style="color: #ff7700">DISCLAIMER:</span> The assets for the player's body in this game are ripped from Metroid Prime, which I own a copy of. <i>I in no way claim to own or have created these assets.</i> This VR game is not and will not ever be distributed in any way, and I will not ever sell it, it's code, it's assets, or the opportunity to experience it on my personal device, nor will I ever accept any form of donation for it. This VR game is purely for me to experiment in a VR environment with hand-tracking capabilities.</b></p>
+	<p style="margin-top: 0; margin-bottom: 200px; text-align: center; font-size: 150px; color: #000000">_ _ _ _ _ _ _</p>
+</div>
+<div style="margin-top: 5%">
+	<h2 style="margin-left: 7%; margin-bottom: 20px; color: #00cc00">Script-Based Record Entry System (SBRES)</h2>
+	<div style="background-color: #00cc00; height: 5px; width: 50%; margin-left: 5%; margin-bottom: 50px"></div>
+	<div style="display: flex; justify-content: center">
+		<figure style="text-align: center">
+			<img src="SBRES0.png" alt="Picture of SBRES init sequence">
+			<figcaption style="font-size: 14px; color: #905555">SBRES first-time initialization sequence</figcaption>
+		</figure>
+		<figure style="text-align: center">
+			<img src="SBRES1.png" alt="Picture of SBRES project management sequence">
+			<figcaption style="font-size: 14px; color: #905555">SBRES project management screen</figcaption>
+		</figure>
+	</div>
+	<figure style="text-align: center">
+		<img src="SBRES2.png" alt="Picture of SBRES logging sequence">
+		<figcaption style="font-size: 14px; color: #905555">SBRES entry logger example</figcaption>
+	</figure>
+	<br>
+	<p style="margin-left: 10%; width: 80%">SBRES is a python program I built to help me with making journal entries, engineering notebooks, and managing a diary. It runs from the command prompt and has intelligent filtering of user input to make sure no errors are thrown. It remembers a set of projects the user creates and modifies by checking and updating a log file. The user can add either a text or image entry to the system by typing or specifying the local path and SBRES will record it with a caption. Once recorded, the system writes each day's entry to it's own html document with links to an index page that interconnects all pages.<br><br>Unfortunately, this project is a couple years old now and I have yet to patch a few bugs related to running it with the latest python build. However, the majority of SBRES' coding has survived the test of time and only the final html-writer method has broken because of outdated code.</p>
+	<p style="margin-top: 0; margin-bottom: 200px; text-align: center; font-size: 150px; color: #000000">_ _ _ _ _ _ _</p>
+</div>
+<div style="margin-top: 5%">
+	<h2 style="margin-left: 7%; margin-bottom: 20px; color: #00cc00">Minecraft Command Block Creations</h2>
+	<div style="background-color: #00cc00; height: 5px; width: 50%; margin-left: 5%; margin-bottom: 50px"></div>
+	<div style="display: flex; justify-content: center">
+		<span style="margin-left: 10%; margin-right: 20%">
+			<video controls><source src="mcCommands0.mp4" type="video/mp4"> Your browser does not support the HTML 'video' tag.</video>
+		</span>
+		<span style="margin-right: 10%">
+			<video controls><source src="mcCommands1.mp4" type="video/mp4"> Your browser does not support the HTML 'video' tag.</video>
+		</span>
+	</div>
+	<br>
+	<p style="margin-left: 10%; width: 80%">The command mechanic in Minecraft is essentially a watered-down coding language. In many ways, 'programming' something in Minecraft through commands is harder than traditional coding because of the creativity required to circumvent the many limitations. In these two project examples, I utilize an internal variable-storage table to keep track of events, positions, speeds, collision, and etc. on a 1/20th second update loop called a 'tick'.<br><br>In the first project, a series of magic spells were created. They pull from a recharging mana pool and have complex interactions with the environment, as well as with other players, enemies, and even other spells. They each have their own distinct sounds as well; custom made by overlapping and modulating in-game sounds to create a visceral response to each arcane tool.<br><br>In the second project, I made a mock-up of the Tron lightcycle game as seen in Tron Legacy. The 'bikes' can move in three dimensions, react to a custom-built gravity engine, are aware of the terrain and can scale slopes and 'ramps', and can jump and change their speed based on user input (something surprisingly hard to track using commands).</p>
+	<p style="margin-top: 0; margin-bottom: 200px; text-align: center; font-size: 150px; color: #000000">_ _ _ _ _ _ _</p>
+</div>
+<div style="margin-top: 5%">
+	<h2 style="margin-left: 7%; margin-bottom: 20px; color: #00cc00">Modelling / Animating / Texturing Work for Metroid Cubed 4 (a Minecraft mod)</h2>
+	<div style="background-color: #00cc00; height: 5px; width: 50%; margin-left: 5%; margin-bottom: 50px"></div>
+	<figure style="text-align: center">
+		<img src="mc4Parasites.jpg" alt="Parasite creatures as seen in Metroid Prime, built from scratch for use in MC4">
+		<figcaption style="font-size: 14px; color: #905555">These three variations of the 'parasite' from Metroid Prime were built from scratch, textured, rigged, and then animated to be used as enemies in MC4</figcaption>
+		<!-- IMAGE WILL SHOW THE 3 PARASITES, EACH IN DIFFERENT ANIM POSES, AS WELL AS COMPARISON IMAGES OF PARASITES FROM MP1-->
+	</figure>
+	<div style="display: flex, justify-content: center">
+		<figure style="text-align: center">
+			<img src="mc4Pirate0.gif" alt="Space Pirate animation example 1. Built from scratch for MC4, based on the same enemy from Metroid Prime">
+			<figcaption style="font-size: 14px; color: #905555">The 'Space Pirate' seen here took nearly three months of work. Modeled, textured, rigged, and animated in the likeness of the same enemy from Metroid Prime; this is also an enemy that will be implemented in MC4</figcaption>
+			<!--GIFS WILL SHOW NOTEWORTHY ANIMS OF THE TALLON PIRATE-->
+		</figure>
+		<figure style="text-align: center">
+			<img src="mc4Pirate1.gif" alt="Space Pirate animation example 2. Built from scratch for MC4, based on the same enemy from Metroid Prime">
+			<figcaption style="font-size: 14px; color: #905555">The 'Space Pirate' seen here took nearly three months of work. Modeled, textured, rigged, and animated in the likeness of the same enemy from Metroid Prime; this is also an enemy that will be implemented in MC4</figcaption>
+			<!--GIFS WILL SHOW NOTEWORTHY ANIMS OF THE TALLON PIRATE-->
+		</figure>
+		<figure style="text-align: center">
+			<img src="mc4Pirate2.gif" alt="Space Pirate animation example 3. Built from scratch for MC4, based on the same enemy from Metroid Prime">
+			<figcaption style="font-size: 14px; color: #905555">The 'Space Pirate' seen here took nearly two full months of work. Modeled, textured, rigged, and animated in the likeness of the same enemy from Metroid Prime; this is also an enemy that will be implemented in MC4</figcaption>
+			<!--GIFS WILL SHOW NOTEWORTHY ANIMS OF THE TALLON PIRATE-->
+		</figure>
+	</div>
+	<figure style="text-align: center">
+		<img src="mpPirateComparison.jpg" alt="Comparison image of the original Space Pirate from Metroid Prime">
+	</figure>
+	<div style="display: flex; justify-content: center">
+		<figure style="text-align: center">
+			<img src="mc4Gunship0.jpg" alt="Image of the Gunship's interior. Modeled and textured from the ground up after the same vehicle from Metroid Prime 3 Corruption">
+			<figcaption style="font-size: 14px; color: #905555">Samus would not be the hunter she is without her Gunship to aid her in her adventures. This is the interior of the model I built for MC4.</figcaption>
+			<!--IMAGE WILL SHOW THE INTERIOR OF THE GUNSHIP, AS WELL AS A COMPARISON IMAGE OF THE REAL GUNSHIP'S INTERIOR-->
+		</figure>
+		<figure style="text-align: center">
+			<img src="mc4Gunship1.jpg" alt="Image of the Gunship's exterior. Modeled and textured from the ground up after the same vehicle from Metroid Prime 3 Corruption">
+			<figcaption style="font-size: 14px; color: #905555">This is the exterior of the Gunship I built for MC4. The vehicle still needs to be fully textured and animated, though modeling and rigging are already done.</figcaption>
+			<!--IMAGE WILL SHOW THE PROGRESS ON THE EXTERIOR OF THE GUNSHIP, AS WELL AS A COMPARISON IMAGE OF THE REAL GUNSHIP'S ENTERIOR-->
+		</figure>
+		<figure style="text-align: center">
+			<img src="mc4Gunship2.jpg" alt="Image of the entire Gunship. Modeled and textured from the ground up after the same vehicle from Metroid Prime 3 Corruption">
+			<figcaption style="font-size: 14px; color: #905555">This is the entirety of the model I built for MC4, shown without a texture so that the model's intricies are more visible. After more than five months, this behemoth of a project is still not finished, but only a small few tasks remain before it is.</figcaption>
+			<!--IMAGE WILL SHOW THE ENTIRETY OF THE GUNSHIP, USING A SOLID WHITE TEXTURE TO EMPHASIZE THE MODEL, AS WELL AS A COMPARISON IMAGE OF THE REAL GUNSHIP WITHOUT TEXTURE-->
+		</figure>
+	</div>
+	<br>
+	<p style="margin-left: 10%; width: 80%">Metroid Cubed 4, a.k.a MC4, is a mod that aims to bring Metroid to Minecraft. After I had submitted a few minor models and ideas, the mod owner 'promoted' me to the title of 'contributer'. This encouraged me to offer some more help to the mod, and soon I was again promoted, this time to one of two 'mod developers'. I now take part in official meetings and discussions over bugs, features, deadlines, and more as co-second-in-command of the mod.<br><br>In the images above: my work for MC4 is shown on the left, and the comparison images of the original Metroid content are shown on the right.<br><br>I am not a programmer for this mod, but I am a modeler-animator. All my work is completely original, though the source material it is based on is clearly not mine. I build all of my models for MC4 in a modeling program developed by the mod owner himself (unless they require non-voxel details, which I build in Blender and import into the program). I also handle all of the texturing, rigging, and animating of the models I create. As it stands, I'm the only graphics artist responsible for creature and vehicle models, textures, and animations.</p>
+	<br>
+	<p style="margin-left: 20%; width: 60%; text-align: center; color: #ff0000; font-size: 15px"><b><span style="color: #ff7700">DISCLAIMER:</span> Everything in this mod is custom built from the ground up; only a few sound effects and music tracks have been taken directly from Metroid. <i>I do not own nor claim to own any part of Metroid or its content, nor does anyone associated with the development of Metroid Cubed 4.</i> This mod is non-profit, and in no way seeks to be anything but a Minecraft mod.</b></p>
+</div>
+<div style="margin-top: 10%; background-color: #555555; height: 100px">
+	<p style="padding-top: 20px; text-align: center; font-size: 15px; color: #00cc00"><span style="color: #0099ff"><b>Discord</b></span><span style="margin-left: 10px; margin-right: 10%">Forjeon#9757</span><span style="color: #ffff00"><b>Email</b></span><span style="margin-left: 10px; margin-right: 10%">jonathancforsgren@gmail.com</span><span style="color: #ff00ff"><b>Indeed</b></span><span style="margin-left: 10px">John Forsgren, Game Developer</p>
+</div>
 </body>
 </html>
